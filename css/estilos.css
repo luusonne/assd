@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+.trasladar {
+	width: 200px; 
+	height: 200px;
+	background:purple;
+	/*
+	transform: translate(400px, 250px)rotate(45deg) scale(2); */
+	transition: all 1s;
+
+}
+
+
+.trasladar:hover {
+	background:red; 
+	width: 400px;
+	
+}
+
+@keyframes mover_y_agrandar {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+	25% {
+		transform: translate(100px,200px) scale(0.8); 
+	}
+	50% {
+		transform: translate(20px,100px) scale(1.5); 
+	}
+	75% {
+		transform: translate(400px,400px) scale(1.2); 
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+.animar {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background:pink;
+	animation-name: mover_y_agrandar;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 1s;
+}
+
